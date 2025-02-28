@@ -23,15 +23,28 @@
                     },
                     fontFamily: {
                         'poppins': ['"Poppins"', "sans-serif"],
-                    }   
+                    }
                 }
             }
         }
     </script>
 </head>
 
-<body>
-    <h1 class="text-primary-color text-5xl font-extrabold font-poppins">Hello DEV</h1>
+<body class="font-poppins">
+    <header>
+        <div class="navbar mx-auto md:max-w-6xl rounded-md shadow mt-3 border flex justify-between">
+            <div>
+                <a href="index.html" class="flex items-center text-2xl"><img class="w-10 pe-2" src="assets/logo.png"
+                        alt="">Dev <span class="font-extrabold">Board</span></a>
+            </div>
+            <div class="gap-10">
+                <h3 class="flex gap-2 items-center"><img class="w-5" src="assets/checkbox.png" alt="">
+                    <span class="font-extrabold text-2xl" id="">23</span>
+                </h3>
+                <button><img class="w-8" src="assets/theme-btn.png" alt=""></button>
+            </div>
+        </div>
+    </header>
 </body>
 
 </html>
