@@ -14,7 +14,17 @@ for (const btnCompleted of btnCompleteds) {
         const updatedTotalTask = totalTask + 1;
         totalTasks.innerText = updatedTotalTask;
         this.disabled = true;
-        event.target.classList.add('bg-gray-500');
+        event.target.classList.add('bg-gray-200', 'text-gray-400');
+
+        const historyButton = document.getElementById('history-container');
+        historyButton.innerHTML = `
+        
+        <div class="bg-white p-2 text-xs rounded-md mb-1">
+                        <p>You have Complete The Task <span>Fix Mobile Button Issue</span></p>
+                    </div>
+        `
+
+
     })
 }
 

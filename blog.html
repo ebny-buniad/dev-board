@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev Board</title>
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- CSS framework -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-color': '#3752FD',
+                        'secondary-color': '#F4F7FF'
+                    },
+                    fontFamily: {
+                        'poppins': ['"Poppins"', "sans-serif"],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-poppins pb-10">
+    <header>
+        <div class="navbar mx-auto md:max-w-6xl rounded-md shadow mt-3 flex justify-between">
+            <div>
+                <a href="index.html" class="flex items-center text-2xl"><img class="w-10 pe-2" src="assets/logo.png"
+                        alt="">Dev <span class="font-extrabold">Board</span></a>
+            </div>
+            <div class="gap-7">
+                <a href="index.html"><button class="bg-primary-color py-3 px-6 text-white font-semibold rounded-md">Back
+                        to Desk</button></a>
+            </div>
+        </div>
+    </header>
+    <main>
+
+    </main>
+
+    <script src="js/feature.js"></script>
+</body>
+
+</html>
