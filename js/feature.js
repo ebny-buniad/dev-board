@@ -36,6 +36,9 @@ document.getElementById('theme-btn').addEventListener('click', function (event) 
     htmlBodyBgColor.style.backgroundColor = generateRandomColor();
 })
 
+const dateIs = new Date();
+
+document.getElementById('date').innerText = new Date().toDateString().slice(4);
 
 
 // Convert String number to NUMBER
