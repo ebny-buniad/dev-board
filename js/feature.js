@@ -31,6 +31,11 @@ for (const btnCompleted of btnCompleteds) {
     })
 }
 
+document.getElementById('theme-btn').addEventListener('click', function (event) {
+    const htmlBodyBgColor = document.getElementById('html');
+    htmlBodyBgColor.style.backgroundColor = generateRandomColor();
+})
+
 
 
 // Convert String number to NUMBER
@@ -38,4 +43,14 @@ function convertInt(id) {
     const getID = document.getElementById(id);
     const convertIntGetID = parseInt(getID.innerText)
     return convertIntGetID;
+}
+
+
+function generateRandomColor() {
+    let hexCodeDigit = '0123456789ABCDF';
+    let hexCodeSign = '#';
+    for (let i = 0; i < 6; i++) {
+        hexCodeSign = hexCodeSign + hexCodeDigit[Math.floor(Math.random() * 16)];
+    }
+    return hexCodeSign;
 }
