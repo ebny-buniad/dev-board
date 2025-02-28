@@ -8,6 +8,9 @@ for (const btnCompleted of btnCompleteds) {
         if (currentTasks < 0) {
             return;
         }
+        else if (currentTasks === 0) {
+            alert("Congratulations!!! You have complete the current task");
+        }
         numberOfTasks.innerText = currentTasks;
         // Updated Total Tasks
         const totalTask = convertInt('totalTasks');
