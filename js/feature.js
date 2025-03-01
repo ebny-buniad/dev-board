@@ -1,6 +1,7 @@
 const btnCompleteds = document.querySelectorAll('.btn-complete');
 for (const btnCompleted of btnCompleteds) {
     btnCompleted.addEventListener("click", function (event) {
+
         alert('Board updated Successfully');
         // Reduce Current Tasks
         const tasks = convertInt('numberOfTasks');
@@ -19,27 +20,50 @@ for (const btnCompleted of btnCompleteds) {
         this.disabled = true;
         event.target.classList.add('bg-gray-200', 'text-gray-400');
 
-        const historyButton = document.getElementById('history-container');
-        historyButton.innerHTML = `
-        
-        <div class="bg-white p-2 text-xs rounded-md mb-1">
-                        <p>You have Complete The Task <span>Fix Mobile Button Issue</span></p>
-                    </div>
-        `
+        // History Section 
 
+        // Find Task title
+        const parentDiv = btnCompleted.parentElement.parentElement.parentElement;
+        const taskTitle = parentDiv.querySelector('.task-title').innerText;
+        // Add History
+        const historyContainer = document.getElementById('history-container');
+        const div = document.createElement('div');
+        div.classList.add('bg-white', 'text-xs', 'p-2', 'rounded-md', 'mb-1');
+        div.innerHTML = `<p>You have Complete The Task <span>${taskTitle}</span></p>`;
+        historyContainer.appendChild(div);
 
+        // Clear History
+        document.getElementById('dlt-history-btn').addEventListener('click', function () {
+            historyContainer.innerHTML = '';
+        })
     })
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Call color generate function 
 document.getElementById('theme-btn').addEventListener('click', function (event) {
     const htmlBodyBgColor = document.getElementById('html');
     htmlBodyBgColor.style.backgroundColor = generateRandomColor();
 })
 
-const dateIs = new Date();
-
-document.getElementById('date').innerText = new Date().toDateString().slice(4);
-
+// Date find 
+document.getElementById('date').innerText = new Date().toDateString();
 
 // Convert String number to NUMBER
 function convertInt(id) {
@@ -48,7 +72,7 @@ function convertInt(id) {
     return convertIntGetID;
 }
 
-
+// Color generate function
 function generateRandomColor() {
     let hexCodeDigit = '0123456789ABCDF';
     let hexCodeSign = '#';
